@@ -16,17 +16,98 @@ Select ONE Additional Feature to Add
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <h1 id="maple">You're Invited!</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barrio&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Cutive+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Unit 5 Project</title>
+    <meta charset="utf-8" />
+    <style>
+          h1{color:rgb(254, 138, 53 ); text-align: center; font-size: 70px}
+          #maple {  font-family: "Barrio", system-ui;}
+          /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+      .flip-card {
+        background-color: rgb(230, 86, 55);
+        width: 500px;
+        height: 500px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+         font-family: "Butterfly Kids", cursive;
+        font-size: 30px
 
-  </style>
-</head>
-<body>
+      }
 
- 
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
-</body>
+      /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: rgb(92, 23, 12);
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: rgb(230, 86, 55);
+        font-size: 50px;
+        color: white;
+        transform: rotateY(180deg);
+      }
+          body {background-image: url(https://i.pinimg.com/736x/d2/b1/8a/d2b18aa12ef67360df824af8fafe6c19.jpg)}
+          p {background-image: url("https://www.entheosweb.com/wp-content/uploads/2024/10/Fall-autumn-desktop-wallpaper-2.jpg")}
+      .invited{ margin: auto; padding: 10px; border: 2px solid rgb(189, 59, 31); width: 550px}
+    </style>
+  </head>
+  <body>
+    <div class="invited">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6f0731af-3951-44f4-99cb-9f4262d1e687_3250x2511.png"
+              alt="Avatar"
+              style="width: 500px; height: 500px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>Friendsgiving!</h1>
+
+            <p><span style= "color:rgb(198, 0, 0)"> Wednesday, November 27</span></p>
+            <p><span style="color:rgb(60, 2, 51)">5:30pm</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
